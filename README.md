@@ -68,7 +68,7 @@ You can download and set up the project in two ways:
 
 #### Option B: Clone via Git
 ```bash
-git clone https://github.com/<OWNER>/telegram-protected-media-forwarder.git
+git clone https://github.com/SadinKai/telegram-protected-media-forwarder.git
 cd telegram-protected-media-forwarder
 ```
 
