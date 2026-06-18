@@ -1,0 +1,49 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.vscode/
+
+# Virtual Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Temporary data / state
+downloads/
+logs/
+data/state.json
+backups/
+
+# Telegram session files
+*.session
+*.session-journal
+.sessions/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Configuration
+config.ini
+
