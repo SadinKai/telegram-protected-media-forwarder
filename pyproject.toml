@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-protected-media-forwarder"
+version = "1.0.0"
+description = "A production-grade Telegram media migration and forwarding tool that handles protected media, offset tracking, and robust error handling."
+readme = "README.md"
+authors = [
+    { name = "SadinKai" }
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "telethon>=1.24.0",
+    "python-dotenv>=1.0.0",
+    "pillow>=9.0.0",
+    "tqdm>=4.64.0",
+    "colorama>=0.4.4",
+]
+
+[project.optional-dependencies]
+speedups = [
+    "cryptg>=0.2.post2",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.18.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "ruff>=0.0.200",
+]
+
+[project.scripts]
+telegram-forwarder = "main:main"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["config", "services", "telegram", "utils"]
+py-modules = ["main", "setup_wizard"]

@@ -1,0 +1,202 @@
+TELEGRAM PROTECTED MEDIA FORWARDER
+
+EASY INSTALLATION STEPS
+
+Follow these steps exactly.
+
+---
+
+## STEP 1 - CHECK THAT PYTHON IS INSTALLED
+
+Open Command Prompt and run:
+
+python --version
+
+You should see something similar to:
+
+Python 3.10.6
+
+If you get an error saying Python is not recognized:
+
+1. Download Python from:
+   https://www.python.org/downloads/
+
+2. During installation, make sure you check:
+
+   [✓] Add Python to PATH
+
+3. Reopen Command Prompt and try again.
+
+---
+
+## STEP 2 - OPEN COMMAND PROMPT IN THE PROJECT FOLDER
+
+1. Open the project folder.
+
+2. Click the address bar at the top of File Explorer.
+
+3. Type:
+
+cmd
+
+4. Press Enter.
+
+A Command Prompt window should open in the project folder.
+
+---
+
+## STEP 3 - CREATE A VIRTUAL ENVIRONMENT
+
+Run:
+
+python -m venv venv
+
+Wait for it to finish.
+
+---
+
+## STEP 4 - ACTIVATE THE VIRTUAL ENVIRONMENT
+
+Run:
+
+venv\Scripts\activate
+
+You should now see:
+
+(venv)
+
+at the beginning of the command line.
+
+---
+
+## STEP 5 - INSTALL REQUIRED PACKAGES
+
+Run:
+
+python -m pip install -r requirements.txt
+
+Wait for the installation to complete.
+
+---
+
+## STEP 6 - VERIFY EVERYTHING WORKS
+
+Run:
+
+python main.py doctor
+
+If the doctor command says API credentials are missing, that is expected on a first-time installation.
+
+---
+
+## STEP 7 - GET YOUR TELEGRAM API ID & HASH
+
+Open:
+
+https://my.telegram.org
+
+Login using your Telegram account.
+
+Open:
+
+API Development Tools
+
+Create a new application.
+
+You can choose any application name.
+
+Copy:
+
+• API ID
+• API Hash
+
+Keep these private.
+
+You will enter them during the setup wizard.
+
+NOTE
+
+Telegram may send the login code directly to your Telegram app instead of SMS.
+
+Check the Telegram app if you do not receive a text message.
+
+---
+
+## STEP 8 - RUN THE SETUP WIZARD
+
+Run:
+
+python main.py setup
+
+The wizard will guide you through the entire configuration process.
+
+You can press Ctrl+C at any time to safely cancel the setup process.
+
+---
+
+## STEP 9 - START FORWARDING
+
+After setup is complete, run:
+
+python main.py start
+
+---
+
+## STEP 10 - SUCCESS
+
+If everything is configured correctly, the forwarder will begin processing messages.
+
+Useful commands:
+
+Check system health:
+
+python main.py doctor
+
+View available chats:
+
+python main.py list-chats
+
+Shows all chats, groups, channels, and Saved Messages that your account can access.
+
+Check current status:
+
+python main.py status
+
+---
+
+## NEED HELP?
+
+Read:
+
+README.md
+
+or
+
+docs/INSTALL.md
+
+or
+
+docs/CONFIGURATION.md
+
+or
+
+docs/TROUBLESHOOTING.md
+
+---
+
+## IMPORTANT SECURITY WARNING
+
+Never share:
+
+• API Hash
+• config.ini
+• .sessions folder
+• .session files
+
+These files can provide access to your Telegram account.
+
+Keep them private.
+
+---
+
+Created and maintained by SadinKai

@@ -1,0 +1,23 @@
+[General]
+; Global settings (optional - default values shown)
+api_id = YOUR_API_ID
+api_hash = YOUR_API_HASH
+string_session = 
+download_dir = downloads
+log_level = INFO
+keep_downloads = false
+max_retries = 3
+upload_delay = 3.0
+flood_wait_limit = 300
+
+[ForwardJob1]
+; 'from' and 'to' can be chat IDs (integers, e.g. -10012345678), usernames (e.g. @my_channel), or Saved Messages ('me').
+; If using a private chat/channel/group, join it first and then select/validate it using setup or list-chats.
+from = -1001111111111
+to = -1002222222222
+offset = 0
+
+[ForwardJob2]
+from = @source_group
+to = @dest_channel
+offset = 0

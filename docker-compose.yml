@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  forwarder:
+    build: .
+    container_name: telegram-forwarder
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./downloads:/app/downloads
+      - ./config.ini:/app/config.ini:ro
+      - ./.env:/app/.env:ro
+      # Allow persistence of the generated telegram session
+      - ./forwarder.session:/app/forwarder.session
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true # Allows interactive login via docker attach
+    tty: true
